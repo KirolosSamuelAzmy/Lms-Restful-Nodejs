@@ -1,6 +1,7 @@
 var express = require('express');
 var http = require('http');
 var path = require("path");
+const port = process.env.PORT || 5000;
 var bodyParser = require('body-parser');
 
 const fs = require('fs');
@@ -12,7 +13,6 @@ var server = http.createServer(app);
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname,'./public')));
-// app.use(helmet());
 
 // Home Page get requests
 app.get('/', function(req,res){
