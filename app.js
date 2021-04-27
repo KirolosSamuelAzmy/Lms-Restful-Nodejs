@@ -2,7 +2,6 @@ var express = require('express');
 var http = require('http');
 var path = require("path");
 var bodyParser = require('body-parser');
-var helmet = require('helmet');
 
 const fs = require('fs');
 
