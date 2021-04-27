@@ -50,7 +50,7 @@ app.post('/web/courses/create',function(req, res)
         if (err) throw err; 
         console.log("Done writing"); // Success
     });
-    res.redirect("http://localhost:3000/api/courses/create/done");
+    res.redirect("/api/courses/create/done");
 });
 
 app.get('/api/courses/create/done',function(req,res){
@@ -153,7 +153,7 @@ app.post('/web/students/create',function(req, res)
         if (err) throw err; 
         console.log("Done writing"); // Success
     });
-    res.redirect("http://localhost:3000/api/students/create/done");
+    res.redirect("/api/students/create/done");
 });
 
 app.get('/api/students/create/done',function(req,res){
@@ -221,5 +221,5 @@ app.delete('/api/students/:id',function(req,res)
 
 
 server.listen(port,function(){ 
-    console.log("Server listening on port: 3000");
+    console.log("Server listening on port:",port);
 });
