@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title> My Form </title>
+</head>
+
+
+<body>
+    <header>
+        <h1> Courses Creation </h1>
+    </header>
+    <form action="http://localhost:3000/web/courses/create" method="POST">
+
+        <label for="Course Name">Enter course name: </label>
+        <input id="name" type="text" name="name"  minlength="5" required>
+        <br></br>
+
+        <label for="Course Code">Enter course code: </label>
+        <input id="code" type="text" name="code"  minlength="6"  maxlength="6" pattern=[A-Za-z]{3}[0-9]{3} required>
+        <br></br> 
+
+        <label for="Course description">Enter course description: </label>
+        <input id="description" type="text" name="description"name" maxlength="200" >
+        <br></br>
+        
+        <input type="submit" value="Create Course">
+    </form>
+</body>
